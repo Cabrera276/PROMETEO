@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Alquimia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css"> <!-- Archivo CSS externo -->
+    <script src="script.js" defer></script> <!-- Archivo JavaScript externo -->
+</head>
+
+<body>
+  <!-- Ventana emergente -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup">
+        <h2 style="color: #A71925;">Para ingresar a la página de Alquimia debes ser mayor de 18 años</h2>
+        <p style="color: black;">¿Eres mayor de edad?</p>
+        <button onclick="aceptarMayorEdad()">Sí</button>
+        <button onclick="rechazarMayorEdad()">No</button>
+        <p style="color: black;">No está permitido la venta de bebidas alcohólicas a menores de 18 años. Por favor, consume con moderación.</p>
+    </div>
+  </div>
+
+  <!-- Contenido principal -->
+  <div id="main-content" style="display: none;">
+    <div class="head">
+      <div class="logo">
+        <img src="LogoAlquimia.png" alt="logo" class="logo">
+      </div>
+    <nav class="navbar">
+    <a href="#" class="menu-item" onclick="activarMenu(this)">
+        Inicio
+       
+    </a>
+    <a href="Historia.html" class="menu-item" onclick="activarMenu(this)">
+        Historia
+       
+    </a>
+    <div class="dropdown">
+        
+		
+  <a href="Producto.html" class="menu-item" onclick="activarMenu(this)">
+        Producto
+       
+    </a>
+
+        <div class="dropdown-content">
+            <a href="Recetas.html">Recetas</a>
+        </div>
+    </div>
+    <a href="Comprar.html" class="menu-item" onclick="activarMenu(this)">
+        Comprar
+        
+    </a>
+    <a href="Contacto.html" class="menu-item" onclick="activarMenu(this)">
+        Contacto
+        
+    </a>
+</nav>
+
+
+
+    </div>
+  </div>
+	<section class="fondo-alquimi">
+	<img src="imagenprincipal.png">
+	</section>
+	
+
+  <div class="container-fondo2">
+	   <div class="text-box">
+
+	  <h1>¿Quiénes somos?</h1>
+	  <p class="parrafo">Somos una empresa dedicada a la<br>
+        elaboración y comercialización de cremas <br>
+        que combinan la riqueza y la complejidad del<br>
+        whisky con la suavidad y la indulgencia <br>
+        de una crema exquisita.</p>
+	  </div>
+	  </div>
+	
+	<footer>
+    <div class="footer-content">
+        <div class="left-section">
+            <div class="header-with-contact">
+                <h3>Trabajamos con</h3>
+                <ul class="horizontal-list">
+                    <li><img src="logo1.png" alt="1"></li>
+                    <li><img src="logo2.png" alt="2"></li>
+                    <li><img src="logo3.png" alt="3"></li>
+                </ul>
+            </div>
+            <div class="follow-us">
+                <h3>Síguenos en:</h3><br>
+                <ul class="social-list">
+                    <li>
+                        <a href="https://www.facebook.com/share/j2VMGwdtRdj9i6gt/" target="_blank" class="social-link">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/1234567890" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="register-client">
+                <h3>Registrar Cliente</h3>
+                <form id="register-form">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+	  </body>
+</html>
