@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+body {
+    text-align: center;
+    font-family: sans-serif;
+	margin: 0;
+	background-color: #FAF6F9;
+}
+
+/* Encabezado */
+.head {
+    background: #E8CDD2;
+    color: azure;
+    text-align: center;
+    padding:  5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+	
+	
+}
+
+
+.logo {
+    margin-left: 20px;
+}
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 10px;
+}
+
+.logo-container {
+    background-color: white; /* Fondo blanco para el logo */
+    padding: 10px; /* Espacio alrededor del logo */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espaciado adicional para pantallas pequeñas */
+}
+
+.logo {
+    max-width: 50px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+
+
+
+/* Ventana emergente */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+.popup {
+    background: #E8CDD2; /* Color guindo */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: white;
+    max-width: 400px;
+    width: 90%;
+    transform: scale(0.8);
+    animation: scaleUp 0.5s ease-out forwards;
+}
+.popup h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #FFE8E9;
+}
+.popup p {
+    margin: 15px 0;
+    color: #FAD9DA;
+    font-size: 16px;
+}
+.popup button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #A84A56;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.popup button:hover {
+    background-color: #8E3741;
+    transform: scale(1.1);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Estilo para el contenido principal */
+
+
+
+/* Estilos para el contenedor con fondo */
+/* Estilos para el contenedor con fondo */
+.container-fondo2 {
+    background-image: url("imagen1.png");
+    text-align: left;
+    color: #A84A56;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px;
+    font-size: 30px;
+    position: relative;
+}
+
+/* Cuadro con título y párrafo */
+.text-box {
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
+    padding: 20px; /* Espaciado interno para el cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
+}
+
+.container-fondo2 h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #A84A56;
+    margin: 0;
+}
+
+.container-fondo2 .parrafo {
+    font-size: 18px;
+    color: black;
+}
+
+
+.purchase-section {
+    text-align: center;
+    margin: 40px 0;
+	background-color: #A94A57;
+	padding: 100px;
+}
+.fondo-alquimi {
+        position: relative; /* Permite posicionar elementos hijos */
+        width: 100%; /* Ancho completo */
+        height: 100vh; /* Altura completa de la ventana */
+        overflow: hidden; /* Oculta el desbordamiento */
+    }
+
+    .fondo-alquimi img {
+        position: absolute; /* Posiciona la imagen de forma absoluta */
+        top: 50%; /* Centra verticalmente */
+        left: 50%; /* Centra horizontalmente */
+        width: 100%; /* Ancho completo */
+        height: auto; /* Mantiene la proporción de la imagen */
+        min-height: 100%; /* Asegura que la imagen cubra toda la altura */
+        min-width: 100%; /* Asegura que la imagen cubra todo el ancho */
+        transform: translate(-50%, -50%); /* Ajusta la posición para centrar */
+    }
+
+    .container-fondo {
+        position: relative; /* Permite posicionar elementos hijos */
+        text-align: center; /* Centra el texto dentro del contenedor */
+        z-index: 1; /* Asegura que el contenido esté encima de la imagen */
+        color: white; /* Color del texto */
+        padding: 20px; /* Espaciado interno */
+    }
+.horizontal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.horizontal-list li img {
+    width: 50px;
+    height: auto;
+}
+.follow-us {
+    margin-top: 20px;
+    text-align: center;
+}
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.social-list li {
+    display: inline;
+}
+.social-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+.social-link i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+
+
+footer {
+    background-color: #E8CDD2; /* Color de fondo del footer */
+    color: #A84A56; /* Color del texto */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.social-media, .follow-us, .register-client {
+    flex: 1;
+    text-align: left;
+    margin: 10px;
+}
+
+.follow-us h3 {
+    font-size: 18px;
+    color: #A84A56; /* Mantén el color original */
+}
+
+.follow-us ul {
+    list-style-type: none; /* Quitar el estilo de la lista */
+    padding: 0; /* Quitar el espaciado predeterminado */
+}
+
+.follow-us .social-link {
+    color: #A84A56; /* Mantener el color original */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.follow-us .social-link:hover {
+    color: #D2C1C8; /* Cambiar color al pasar el mouse */
+}
+
+.follow-us .social-link i {
+    font-size: 18px; /* Tamaño del ícono */
+}
+
+
+.follow-us {
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+
+
+.register-client {
+    flex: 1; /* Permitir que esta sección ocupe espacio */
+    text-align: center; /* Alinear texto a la izquierda */
+    display: flex; /* Usar flexbox para el diseño interno */
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    gap: 15px; /* Espaciado entre los elementos */
+}
+
+.register-client input {
+    width: 50%; /* Ocupa el 80% del ancho del contenedor */
+    margin: 5px; /* Eliminar márgenes */
+    padding: 10px; /* Espaciado interno */
+    border: 2px solid #A84A56; /* Borde definido */
+    border-radius: 5px; /* Esquinas redondeadas */
+    transition: all 0.3s ease; /* Animaciones suaves */
+}
+
+.register-client input:focus {
+    border-color: #E8CDD2; /* Cambia el color del borde al enfocar */
+    box-shadow: 0 0 8px #E8CDD2; /* Añade un efecto de sombra */
+    outline: none; /* Elimina el contorno predeterminado */
+}
+
+.register-client button {
+    width: 50%; /* Ajustar el ancho del botón */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #A84A56; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: 2px solid #A84A56; /* Borde del mismo color */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar */
+    transition: all 0.3s ease; /* Animaciones suaves */
+}
+
+.register-client button:hover {
+    background-color: #E8CDD2; /* Cambiar fondo al pasar el mouse */
+    color: #A84A56; /* Cambiar el color del texto */
+    border-color: #A84A56; /* Cambiar el color del borde */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+}
+
+.register-client button:active {
+    transform: scale(0.95); /* Reducir ligeramente el tamaño al hacer clic */
+}
+
+.contact {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-link {
+    color: #A84A56; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: color 0.3s ease; /* Suavizar el cambio de color */
+}
+
+.contact-link:hover {
+    color: #D2C1C8; /* Cambiar color al pasar el mouse */
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+.header-with-contact {
+    display: flex; /* Usar flexbox para colocar elementos en línea */
+    align-items: center; /* Alinear verticalmente */
+    gap: 70px; /* Espaciado entre el título y el enlace */
+}
+
+.contact-link {
+    color: #A84A56; /* Color del enlace */
+    font-weight: bold; /* Texto en negrita */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño del texto */
+    transition: color 0.3s ease; /* Efecto de transición */
+}
+
+.contact-link:hover {
+    color: #E8CDD2; /* Cambiar color al pasar el mouse */
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+.header-with-contact {
+    display: flex; /* Usar flexbox para colocar elementos en línea */
+    align-items: center; /* Alinear verticalmente */
+    gap: 90px; /* Espaciado entre el título y el enlace */
+}
+.header-with-contact h3 {
+    margin-bottom: 5px; /* Reducir el espacio del título */
+}
+
+.header-with-contact ul.horizontal-list {
+    margin-top: 0; /* Reducir el margen superior de los logos */
+    padding-top: 0px; /* Añadir padding si es necesario */
+}
+.header-with-contact ul.horizontal-list li img {
+    width: 100px; /* Ajusta este valor para aumentar el ancho */
+    height: auto; /* Mantén la proporción de altura automáticamente */
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E8CDD2;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	border-radius: 15px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #E8CDD2;
+	border-radius: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Fuente y color por defecto */
+.menu-item {
+    font-family: Quicksand; /* Cambiar a Montserrat */
+    color: white; /* Color blanco */
+    text-decoration: none; /* Quitar subrayado */
+    font-size: 20px; /* Aumentar el tamaño de las letras */
+    margin: 0 15px; /* Espaciado entre los elementos del menú */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}
+
+/* Fuente y color al pasar el mouse por encima (hover) */
+.menu-item:hover {
+    font-family:  cursive !important; /* Asegurar Montserrat */
+    color: red !important; /* Cambia este valor al color que prefieras */
+    text-decoration: none; /* Asegurarse de que no haya subrayado */
+}
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Cambiar el layout a columna en lugar de fila */
+        text-align: center; /* Centrar el texto */
+    }
+
+
+
+
+
+
+
+

@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Recetas</title>
+	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+	
+<link rel="stylesheet" href="styles6.css"> <!-- Archivo CSS externo -->
+	
+
+</head>
+
+<body>
+<header>
+        <div class="logo">
+            <img src="LogoAlquimia.png" alt="logo de alquimia">
+        </div>
+       <nav class="navbar">
+    <a href="index.html" class="menu-item" onclick="activarMenu(this)">Inicio</a>
+    <a href="Historia.html" class="menu-item" onclick="activarMenu(this)">Historia</a>
+    <div class="dropdown">
+        <a href="Producto.html" class="menu-item" onclick="activarMenu(this)">Producto</a>
+        <div class="dropdown-content">
+            <a href="Recetas.html">Recetas</a>
+        </div>
+    </div>
+    <a href="Comprar.html" class="menu-item" onclick="activarMenu(this)">Comprar</a>
+    <a href="Contacto.html" class="menu-item" onclick="activarMenu(this)">Contacto</a>
+</nav>
+    </header>
+	<section class="fondo-alquimi">
+    <img src="paginarecetas.jpg" alt="Imagen principal">
+		<div class="titulo-centro">
+        <h1>Coppa Oreo y crema de whisky</h1>
+    </div>
+    <div class="button-overlay">
+        <button type="button" class="info-button" onclick="showText('text1')">Preparación:</button>
+        <button type="button" class="info-button" onclick="showText('text2')">Ingredientes:</button>
+    </div>
+    <div id="text1" class="hidden-text slide-in">Preparación
+Coloca las galletas Oreo en una licuadora y licúa hasta que estén finamente picadas.
+Echar la leche en un cazo, poner al fuego y llevar a ebullición. Retirar del fuego y añadir el chocolate negro cortado en trozos. Revuelva para derretir el chocolate, luego transfiéralo a un bol y déjelo enfriar.
+En otro bol batir la nata con el azúcar glas, luego añadir la crema de whisky (Alquimia) (fría), incorporándola con un movimiento de abajo hacia arriba. Dividir la nata obtenida por la mitad, la mitad se mezclará con la mezcla de chocolate hecha previamente, mezclando siempre con un movimiento de abajo hacia arriba.</div>
+    <div id="text2" class="hidden-text slide-in">
+Para 4 tazas:<br>
+- 10 galletas oreos<br>
+- 75 gramos de chocolate negro 100ml de leche<br>
+- 250 ml de nata para montar<br>
+- 50ml de crema de whisky<br>
+- 30 g de azúcar glas</div>
+</section>
+
+
+
+<section class="carrusel-section">
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide"><img src="carrusel1.png" alt="Imagen 1">
+			<div class="carousel-caption">Brownie de chocolate y crema de leche</div> 
+			</div>
+			
+            <div class="carousel-slide"><img src="carrusel2.png" alt="Imagen 2">
+			<div class="carousel-caption">Helado de caramelo con crema de whisky</div> 
+			</div>
+            <div class="carousel-slide"><img src="carrusel3.jpeg" alt="Imagen 3">
+			<div class="carousel-caption">Semifrío de crema de whisky</div> 
+			</div>
+            <div class="carousel-slide"><img src="carrusel4.jpeg" alt="Imagen 4">
+			<div class="carousel-caption">Tarta de queso y chocolate con crema de whisky</div> 
+			</div>
+            
+        </div>
+        <!-- Botones para navegación -->
+        <button class="carousel-button prev">&lt;</button>
+        <button class="carousel-button next">&gt;</button>
+    </div>
+</section>
+
+
+    
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<footer>
+    <div class="footer-content">
+        <!-- Sección izquierda -->
+        <div class="left-section">
+            <div class="header-with-contact">
+                <h3>Trabajamos con</h3>
+                <ul class="logo-list">
+                    <li><img src="logo1.png" alt="1"></li>
+                    <li><img src="logo2.png" alt="2"></li>
+                    <li><img src="logo3.png" alt="3"></li>
+                </ul>
+            </div>
+            <div class="follow-us">
+                <h3>Síguenos en:</h3>
+                <ul class="social-list">
+                    <li>
+                        <a href="https://www.facebook.com/share/j2VMGwdtRdj9i6gt/" target="_blank" class="social-link">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/1234567890" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       
+    </div>
+</footer>
+
+	
+	<script>
+    const carousel = document.querySelector('.carousel-container');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const nextButton = document.querySelector('.carousel-button.next');
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const width = slides[currentIndex].clientWidth;
+        carousel.style.transform = `translateX(-${currentIndex * width}px)`;
+    }
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length; // Cicla al principio
+        updateCarousel();
+    });
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Cicla al final
+        updateCarousel();
+    });
+
+    // Ajustar el carrusel al redimensionar la ventana
+    window.addEventListener('resize', updateCarousel);
+		
+		
+		
+    function showText(id) {
+        const textElement = document.getElementById(id);
+        if (textElement.style.display === "none" || textElement.style.display === "") {
+            textElement.style.display = "block";
+        } else {
+            textElement.style.display = "none";
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

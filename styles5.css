@@ -1,0 +1,325 @@
+body {
+    font-family: "sans-serif";
+    margin: 0;
+	
+}
+
+header {
+    background: #E8CDD2;
+    color: azure;
+    text-align: center;
+    padding: 5px; /* Ajusta el padding si es necesario */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.logo-container {
+    background-color: white; /* Fondo blanco para el logo */
+    padding: 10px; /* Espacio alrededor del logo */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espaciado adicional para pantallas pequeñas */
+}
+
+.logo {
+    max-width: 50px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    margin-left: 40px; /* Mueve el logo hacia la izquierda */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E8CDD2;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	border-radius: 15px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #E8CDD2;
+	border-radius: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Fuente y color por defecto */
+.menu-item {
+    font-family: Quicksand; /* Cambiar a Montserrat */
+    color: white; /* Color blanco */
+    text-decoration: none; /* Quitar subrayado */
+    font-size: 20px; /* Aumentar el tamaño de las letras */
+    margin: 0 15px; /* Espaciado entre los elementos del menú */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}
+
+/* Fuente y color al pasar el mouse por encima (hover) */
+.menu-item:hover {
+    font-family:  cursive !important; /* Asegurar Montserrat */
+    color: red !important; /* Cambia este valor al color que prefieras */
+    text-decoration: none; /* Asegurarse de que no haya subrayado */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Sección de contacto */
+/* Contenedor general de la sección de contacto */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px 20px;
+   
+    color: #A84A56;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    gap: 30px; /* Espacio entre el título y el formulario */
+}
+
+/* Estilo para el título de la sección */
+.contact-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    width: 40%; /* Ocupa un espacio específico a la izquierda */
+}
+
+/* Contenedor del formulario */
+.contact-form {
+    width: 50%; /* Ajusta el ancho del formulario */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre los elementos */
+}
+
+/* Estilo de los campos del formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0; /* Eliminamos márgenes extra */
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #A84A56;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #A84A56;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box; /* Asegura que padding no desborde */
+    transition: border-color 0.3s ease;
+}
+
+.form-group textarea {
+    height: 200px; /* Ajusta la altura según sea necesario */
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #E8CDD2;
+    outline: none;
+}
+
+/* Ajustar Teléfono y Correo en una misma fila */
+.inline-fields {
+    display: flex;
+    gap: 15px; /* Espaciado entre los campos */
+    justify-content: space-between;
+}
+
+.inline-fields .form-group {
+    flex: 1; /* Ambos campos ocupan el mismo espacio */
+}
+
+/* Botón de enviar */
+button {
+    padding: 10px 20px;
+    background-color: #A84A56;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #E8CDD2;
+}
+/* Contenedor general de la sección de contacto */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 20px;
+    color: #A84A56;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    gap: 30px; /* Espacio entre el título y el formulario */
+}
+
+/* Estilo para el título de la sección */
+.contact-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    width: 40%; /* Ocupa un espacio específico a la izquierda */
+}
+
+/* Contenedor de la información de contacto a la izquierda */
+.contact-info {
+    width: 40%; /* Ajusta el ancho del bloque de información */
+    color: #A84A56;
+	margin-left: 80px; /* Añade un margen para desplazar el bloque a la derecha */
+}
+
+/* Estilo de los títulos (Correo, Línea Gratuita, Horario de Atención) */
+.contact-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #A84A56;
+}
+
+/* Estilo de los párrafos debajo de cada título */
+.contact-info p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Contenedor del formulario */
+.contact-form {
+    width: 50%; /* Ajusta el ancho del formulario */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre los elementos */
+}
+
+/* Estilo de los campos del formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0; /* Eliminamos márgenes extra */
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #A84A56;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #A84A56;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box; /* Asegura que padding no desborde */
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #E8CDD2;
+    outline: none;
+}
+
+/* Ajustar Teléfono y Correo en una misma fila */
+.inline-fields {
+    display: flex;
+    gap: 15px; /* Espaciado entre los campos */
+    justify-content: space-between;
+}
+
+.inline-fields .form-group {
+    flex: 1; /* Ambos campos ocupan el mismo espacio */
+}
+
+/* Botón de enviar */
+button {
+    padding: 10px 20px;
+    background-color: #A84A56;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #E8CDD2;
+}
+

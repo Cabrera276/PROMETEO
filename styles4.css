@@ -1,0 +1,163 @@
+/* Estilos básicos de la página */
+body {
+    font-family: "sans-serif";
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Cambiado de row a column para que el contenido vaya debajo del header */
+    height: 100vh; /* Alto total de la página para que el header sea fijo y el contenido se acomode debajo */
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Estilos del header */
+header {
+    background: #E8CDD2;
+    color: azure;
+    text-align: center;
+    padding: 5px; /* Ajusta el padding si es necesario */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.logo-container {
+    background-color: white; /* Fondo blanco para el logo */
+    padding: 10px; /* Espacio alrededor del logo */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espaciado adicional para pantallas pequeñas */
+}
+
+.logo {
+    max-width: 50px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    margin-left: 40px; /* Mueve el logo hacia la izquierda */
+}
+
+/* Estilos del menú de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-item {
+    font-family: Quicksand; /* Cambiar a Montserrat */
+    color: white; /* Color blanco */
+    text-decoration: none; /* Quitar subrayado */
+    font-size: 20px; /* Aumentar el tamaño de las letras */
+    margin: 0 15px; /* Espaciado entre los elementos del menú */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}
+
+.menu-item:hover {
+    font-family: cursive !important; /* Asegurar Montserrat */
+    color: red !important; /* Cambia este valor al color que prefieras */
+    text-decoration: none; /* Asegurarse de que no haya subrayado */
+}
+
+/* Estilos de la sección de contenido */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Asegura que ocupe todo el alto disponible */
+    background-image: url('Comprar.png'); /* Cambia la ruta a la imagen de fondo */
+    background-size: cover; /* Hace que la imagen cubra todo el área sin deformarse */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Hace que la imagen no se mueva al hacer scroll */
+    margin-top: 0px; /* Margen superior ajustado para que no se pegue al header */
+    color: #fff; /* Hace que el texto sea blanco sobre la imagen */
+}
+
+/* Estilo para la sección de texto */
+.text-section {
+    text-align: left;
+    width: 40%; /* Ajusta el tamaño del contenedor de texto */
+    padding: 20px; /* Añade espacio alrededor del texto */
+}
+
+.button {
+   padding: 15px 30px; /* Ajusta el tamaño de los márgenes internos */
+    background-color: #B9646B; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 30px; /* Hace los bordes más ovalados horizontalmente */
+    cursor: pointer;
+    font-size: 40px; /* Tamaño de la fuente */
+	font-family: Quicksand; /* Cambiar a Montserrat */
+    transition: all 0.3s ease;
+    margin-top: 30px; /* Ajusta este valor para mover el texto un poco más abajo */
+	margin-left: 100px; /* Ajusta este valor para mover el botón más a la derecha */
+	text-decoration: none; /* Quitar subrayado */
+}
+.button:hover {
+    background-color: #E8CDD2; /* Cambio de color al pasar el mouse */
+    color: #A84A56;
+}
+
+.text-section p {
+    margin: 10px 0;
+	font-size: 20px;
+    margin-top: 30px; /* Ajusta este valor para mover el texto un poco más abajo */
+	font-family: Quicksand; /* Cambiar a Montserrat */
+	text-align: center;
+}
+
+.textopar{
+ margin: 10px 0;
+    font-size: 100px; /* Ajusta este tamaño a un valor más adecuado */
+    color: #A84A56;
+	font-family: Quicksand; /* Cambiar a Montserrat */
+}
+
+.image-section {
+    max-width: 400px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 5px;
+    display: none; /* Oculta la imagen si ahora es fondo */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E8CDD2;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	border-radius: 15px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #E8CDD2;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

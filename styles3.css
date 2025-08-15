@@ -1,0 +1,291 @@
+body {
+    font-family: "sans-serif";
+    margin: 0;
+	
+}
+
+header {
+    background: #E8CDD2;
+    color: azure;
+    text-align: center;
+    padding: 5px; /* Ajusta el padding si es necesario */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.logo-container {
+    background-color: white; /* Fondo blanco para el logo */
+    padding: 10px; /* Espacio alrededor del logo */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espaciado adicional para pantallas pequeñas */
+}
+
+.logo {
+    max-width: 50px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    margin-left: 40px; /* Mueve el logo hacia la izquierda */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E8CDD2; /* Color de fondo igual al footer */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: all 0.3s ease; /* Animación suave */
+}
+
+.dropdown-content a {
+    color: white; /* Color de texto blanco */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Quicksand; /* Fuente Montserrat */
+    transition: all 0.3s ease; /* Transición suave */
+	background-color: #E8CDD2;
+	border: 2px solid white; /* Borde blanco definido */ 
+	border-radius: 50px; /* Borde redondeado máximo para evitar bordes cuadrados */ box-sizing: border-box;
+}
+
+.dropdown-content a:hover {
+    background-color: #E8CDD2; /* Cambiar fondo al pasar el mouse */
+    color: red; /* Cambiar color de texto al pasar el mouse */
+	font-family:  cursive !important; /* Asegurar Montserrat */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Fuente y color por defecto */
+.menu-item {
+    font-family: Quicksand; /* Cambiar a Montserrat */
+    color: white; /* Color blanco */
+    text-decoration: none; /* Quitar subrayado */
+    font-size: 20px; /* Aumentar el tamaño de las letras */
+    margin: 0 15px; /* Espaciado entre los elementos del menú */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}
+
+/* Fuente y color al pasar el mouse por encima (hover) */
+.menu-item:hover {
+    font-family:  cursive !important; /* Asegurar Montserrat */
+    color: red !important; /* Cambia este valor al color que prefieras */
+    text-decoration: none; /* Asegurarse de que no haya subrayado */
+}
+
+
+
+.swiper {
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    width: 300px; /* Ajusta el tamaño de las imágenes del carrusel */
+    height: 500px;
+    background-color: #A71925;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+	  border-radius: 10px; /* Agrega un borde redondeado */
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.icons i {
+    font-size: 20px;
+    color: #FFB900;
+}
+
+.icons img {
+    width: 120px;
+}
+
+.product-txt {
+    flex-basis: 50%;
+    text-align: left;
+}
+
+.product-txt span {
+    font-size: 25px;
+    color: #E8CDD2;
+    font-weight: bold;
+}
+
+.product-txt h3 {
+    font-size: 20px;
+    color: #E8CDD2;
+    text-transform: uppercase;
+	text-align: center;
+}
+
+.texto {
+    font-size: 14px;
+    color: white;
+	text-align: center;
+	margin: 2px;
+}
+
+.product-img {
+    flex-basis: 50%;
+    text-align: center;
+	
+}
+
+.product-img img {
+    width: 170px; /* Ajusta el tamaño de las imágenes dentro del carrusel */
+}
+
+.btn-1 {
+            display: inline-block;
+            padding: 13px 55px;
+            border: 1px solid #C75C71;
+            border-radius: 25px;
+            color: #C75C71;
+            text-decoration: none;
+            margin-top: 30px;
+            transition: all 0.3s ease; /* Animación suave */
+        }
+
+        .btn-1:hover {
+            background-color: #791127;
+            color: white;
+            transform: scale(1.1); /* Pequeña animación de escala */
+        }
+
+
+footer {
+    background-color: #E8CDD2; /* Color de fondo del footer */
+    color: #A84A56; /* Color del texto */
+    padding: 5px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.social-media, .follow-us, .register-client {
+    flex: 1;
+    text-align: left;
+    margin: 10px;
+}
+
+.follow-us h3 {
+    font-size: 18px;
+    color: #A84A56; /* Mantén el color original */
+}
+
+.follow-us ul {
+    list-style-type: none; /* Quitar el estilo de la lista */
+    padding: 0; /* Quitar el espaciado predeterminado */
+}
+
+.follow-us .social-link {
+    color: #A84A56; /* Mantener el color original */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.follow-us .social-link:hover {
+    color: #D2C1C8; /* Cambiar color al pasar el mouse */
+}
+
+.follow-us .social-link i {
+    font-size: 18px; /* Tamaño del ícono */
+}
+
+
+.follow-us {
+    text-align: left; /* Alinear texto a la izquierda */
+}
+/* Contenedor general del footer */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo para la sección de logos */
+.logo-row {
+    margin-bottom: 20px;
+}
+
+.logo-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+	
+}
+
+.logo-list li {
+    margin: 0 15px;
+}
+
+.logo-list img {
+   height: 70px; /* <-- modifica este valor */
+    width: auto;
+}
+
+/* Estilo para redes sociales */
+.social-row {
+    margin-top: 10px;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.social-list li {
+    margin: 0 15px;
+}
+
+.social-link {
+    color: #A84A56;
+    font-size: 24px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: #D2C1C8;
+}
+
